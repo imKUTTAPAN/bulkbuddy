@@ -1,0 +1,17 @@
+{
+  "name": "bulk-email-app",
+  "version": "1.0.0",
+  "description": "A bulk email campaign manager UI.",
+  "main": "send.js",
+  "scripts": {
+    "start": "node send.js"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^4.17.1",
+    "googleapis": "^161.0.0",
+    "nodemailer": "^7.0.6"
+  }
+}

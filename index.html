@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk Buddy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="/images/logo.png" alt="Bulk Buddy Logo" class="logo">
+            <h1>Bulk Buddy</h1>
+            </div>
+
+        <form id="email-form">
+            <div class="main-grid">
+                <div class="main-content">
+                    <div class="form-group">
+                        <label for="template-select">Email Templates</label>
+                        <select id="template-select">
+                            <option value="">presets [optional]</option>
+                            <option value="welcome">Welcome to our platform!</option>
+                            <option value="newsletter">Monthly Newsletter</option>
+                            <option value="promotion">Special Promotion</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject-line">Subject</label>
+                        <input type="text" id="subject-line" name="subject-line" required placeholder="Enter subject...">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message-input">Message</label>
+                        <textarea id="message-input" name="message-input" rows="10" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Add Manually</label>
+                        <div class="manual-entry">
+                            <input type="email" id="manual-email" placeholder="Email">
+                            <span id="email-validation-msg" class="validation-msg"></span>
+                            <input type="text" id="manual-first-name" placeholder="First Name">
+                            <input type="text" id="manual-last-name" placeholder="Last Name">
+                            <button type="button" id="add-recipient-btn">Add</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-panel">
+                    <div class="form-group">
+                        <label>Recipient List (csv)</label>
+                        <div id="csv-drop-zone" class="drop-zone">
+                            <p>Drag & drop your CSV file here or click to select.</p>
+                            <input type="file" id="csv-upload" name="csv-upload" accept=".csv" class="hidden-file-input">
+                        </div>
+                    </div>
+
+                    <div class="recipients-list" id="recipients-list">
+                        </div>
+
+                    <div id="validation-errors">
+                        </div>
+                </div>
+            </div>
+            
+            <button type="submit" class="send-btn">send</button>
+        </form>
+
+        <div id="status-display">
+            <div id="progress-container">
+                <div id="progress-bar"></div>
+                <p id="progress-text">0%</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
