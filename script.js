@@ -25,15 +25,15 @@ let invalidRecipients = []; // New array to hold invalid recipients
 const emailTemplates = {
     welcome: {
         subject: "Welcome to Our Platform!",
-        message: "Hi ((first_name))! Welcome to our platform. We're excited to have you join our community and look forward to seeing what you'll create."
+        message: "Hi! Welcome to our platform. We're excited to have you join our community and look forward to seeing what you'll create."
     },
     newsletter: {
         subject: "Monthly Newsletter: Your September Update",
-        message: "Hello ((first_name))! Here is your monthly update. In this issue, we'll cover the latest news, features, and tips to help you get the most out of our service."
+        message: "Hello! Here is your monthly update. In this issue, we'll cover the latest news, features, and tips to help you get the most out of our service."
     },
     promotion: {
         subject: "Don't Miss Out! A Special Offer Just For You!",
-        message: "Hi ((first_name))! We wanted to let you know about a special promotion for our valued users. Get 20% off your next purchase when you use the code: SPECIAL20."
+        message: "Hi! We wanted to let you know about a special promotion for our valued users. Get 20% off your next purchase when you use the code: SPECIAL20."
     }
 };
 
